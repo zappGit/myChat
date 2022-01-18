@@ -8,12 +8,14 @@
 import Foundation
 import UIKit
 
+
+
 extension UIButton {
     convenience init (backgroundColor: UIColor,
                       titleColor: UIColor,
                       title: String,
-                      font: UIFont? = .avanir20(),
-                      isShadow: Bool,
+                      font: UIFont? = .avenir20(),
+                      isShadow: Bool = false,
                       cornerRadius: CGFloat = 4) {
         self.init(type: .system)
         self.setTitle(title, for: .normal)
