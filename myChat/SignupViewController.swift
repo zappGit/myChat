@@ -14,7 +14,7 @@ class SignupViewController: UIViewController {
     let emailLabel = UILabel(text: "Email", font: .avenir20())
     let passwordLabel = UILabel(text: "Password", font: .avenir20())
     let confirmPasswordLabel = UILabel(text: "Confirm password", font: .avenir20())
-    let alreadyOnBoardLabel = UILabel(text: "Already onboard", font: .avenir20())
+    let alreadyOnBoardLabel = UILabel(text: "Already onboard?", font: .avenir20())
     
     let emailTextField = OneLineTextfield(font: .avenir20())
     let passwordTextField = OneLineTextfield(font: .avenir20())
@@ -46,9 +46,12 @@ extension SignupViewController {
                                                       confirmPasswordStackView,
                                                       signUpButton
                                                      ], axis: .vertical, spasing: 40)
+        loginButton.contentHorizontalAlignment = .leading
         let bottomStackView = UIStackView(arrangeSubviews: [alreadyOnBoardLabel,
                                                             loginButton
-                                                           ], axis: .horizontal, spasing: -1)
+                                                           ], axis: .horizontal,
+                                                            spasing: 10)
+        bottomStackView.alignment = .firstBaseline
         stackView.translatesAutoresizingMaskIntoConstraints = false
         bottomStackView.translatesAutoresizingMaskIntoConstraints = false
         welcomeLabel.translatesAutoresizingMaskIntoConstraints = false
