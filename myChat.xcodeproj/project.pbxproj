@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		B8052C70279AEE9700585130 /* SetupProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8052C6F279AEE9700585130 /* SetupProfileViewController.swift */; };
 		B8052C72279AF0AF00585130 /* AddPhotoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8052C71279AF0AF00585130 /* AddPhotoView.swift */; };
+		B8052C74279C334D00585130 /* UISegmentedControl+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8052C73279C334D00585130 /* UISegmentedControl+extension.swift */; };
 		B8220C022791B04200E1E7EC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8220C012791B04200E1E7EC /* AppDelegate.swift */; };
 		B8220C042791B04200E1E7EC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8220C032791B04200E1E7EC /* SceneDelegate.swift */; };
 		B8220C062791B04200E1E7EC /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8220C052791B04200E1E7EC /* AuthViewController.swift */; };
@@ -29,6 +30,7 @@
 /* Begin PBXFileReference section */
 		B8052C6F279AEE9700585130 /* SetupProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupProfileViewController.swift; sourceTree = "<group>"; };
 		B8052C71279AF0AF00585130 /* AddPhotoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPhotoView.swift; sourceTree = "<group>"; };
+		B8052C73279C334D00585130 /* UISegmentedControl+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UISegmentedControl+extension.swift"; sourceTree = "<group>"; };
 		B8220BFE2791B04200E1E7EC /* myChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = myChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B8220C012791B04200E1E7EC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B8220C032791B04200E1E7EC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -101,6 +103,7 @@
 				B8220C1927944CDD00E1E7EC /* UIColor+extension.swift */,
 				B8220C1727944BDD00E1E7EC /* UIFont+extension.swift */,
 				B8220C152794486B00E1E7EC /* UIButton+Extension.swift */,
+				B8052C73279C334D00585130 /* UISegmentedControl+extension.swift */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -186,6 +189,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B8052C74279C334D00585130 /* UISegmentedControl+extension.swift in Sources */,
 				B8220C062791B04200E1E7EC /* AuthViewController.swift in Sources */,
 				B8220C1827944BDD00E1E7EC /* UIFont+extension.swift in Sources */,
 				B846746B2795C4FA00498884 /* SignupViewController.swift in Sources */,
