@@ -10,6 +10,9 @@
 		B8052C70279AEE9700585130 /* SetupProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8052C6F279AEE9700585130 /* SetupProfileViewController.swift */; };
 		B8052C72279AF0AF00585130 /* AddPhotoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8052C71279AF0AF00585130 /* AddPhotoView.swift */; };
 		B8052C74279C334D00585130 /* UISegmentedControl+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8052C73279C334D00585130 /* UISegmentedControl+extension.swift */; };
+		B8052C76279DA89500585130 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8052C75279DA89400585130 /* ListViewController.swift */; };
+		B8052C7A279DABCF00585130 /* MainTopbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8052C79279DABCF00585130 /* MainTopbarController.swift */; };
+		B8052C7C279DACB400585130 /* PeopleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8052C7B279DACB400585130 /* PeopleViewController.swift */; };
 		B8220C022791B04200E1E7EC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8220C012791B04200E1E7EC /* AppDelegate.swift */; };
 		B8220C042791B04200E1E7EC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8220C032791B04200E1E7EC /* SceneDelegate.swift */; };
 		B8220C062791B04200E1E7EC /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8220C052791B04200E1E7EC /* AuthViewController.swift */; };
@@ -31,6 +34,9 @@
 		B8052C6F279AEE9700585130 /* SetupProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupProfileViewController.swift; sourceTree = "<group>"; };
 		B8052C71279AF0AF00585130 /* AddPhotoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPhotoView.swift; sourceTree = "<group>"; };
 		B8052C73279C334D00585130 /* UISegmentedControl+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UISegmentedControl+extension.swift"; sourceTree = "<group>"; };
+		B8052C75279DA89400585130 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
+		B8052C79279DABCF00585130 /* MainTopbarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTopbarController.swift; sourceTree = "<group>"; };
+		B8052C7B279DACB400585130 /* PeopleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleViewController.swift; sourceTree = "<group>"; };
 		B8220BFE2791B04200E1E7EC /* myChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = myChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B8220C012791B04200E1E7EC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B8220C032791B04200E1E7EC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -61,6 +67,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B8052C77279DAB9C00585130 /* SignIn+Auth */ = {
+			isa = PBXGroup;
+			children = (
+				B8220C052791B04200E1E7EC /* AuthViewController.swift */,
+				B846746A2795C4FA00498884 /* SignupViewController.swift */,
+				B846746E279851AA00498884 /* LoginViewController.swift */,
+				B8052C6F279AEE9700585130 /* SetupProfileViewController.swift */,
+			);
+			name = "SignIn+Auth";
+			sourceTree = "<group>";
+		};
+		B8052C78279DABB600585130 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				B8052C79279DABCF00585130 /* MainTopbarController.swift */,
+				B8052C75279DA89400585130 /* ListViewController.swift */,
+				B8052C7B279DACB400585130 /* PeopleViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
 		B8220BF52791B04200E1E7EC = {
 			isa = PBXGroup;
 			children = (
@@ -82,10 +109,8 @@
 			children = (
 				B8220C012791B04200E1E7EC /* AppDelegate.swift */,
 				B8220C032791B04200E1E7EC /* SceneDelegate.swift */,
-				B8220C052791B04200E1E7EC /* AuthViewController.swift */,
-				B846746A2795C4FA00498884 /* SignupViewController.swift */,
-				B846746E279851AA00498884 /* LoginViewController.swift */,
-				B8052C6F279AEE9700585130 /* SetupProfileViewController.swift */,
+				B8052C77279DAB9C00585130 /* SignIn+Auth */,
+				B8052C78279DABB600585130 /* Controllers */,
 				B8220C202795B68000E1E7EC /* Extensions */,
 				B8220C0A2791B04400E1E7EC /* Assets.xcassets */,
 				B8220C0C2791B04400E1E7EC /* LaunchScreen.storyboard */,
@@ -189,13 +214,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B8052C76279DA89500585130 /* ListViewController.swift in Sources */,
 				B8052C74279C334D00585130 /* UISegmentedControl+extension.swift in Sources */,
 				B8220C062791B04200E1E7EC /* AuthViewController.swift in Sources */,
 				B8220C1827944BDD00E1E7EC /* UIFont+extension.swift in Sources */,
 				B846746B2795C4FA00498884 /* SignupViewController.swift in Sources */,
+				B8052C7C279DACB400585130 /* PeopleViewController.swift in Sources */,
 				B846746D2795C82000498884 /* TextField.swift in Sources */,
 				B8052C70279AEE9700585130 /* SetupProfileViewController.swift in Sources */,
 				B8220C1E2795B0FA00E1E7EC /* UIImageView+extension.swift in Sources */,
+				B8052C7A279DABCF00585130 /* MainTopbarController.swift in Sources */,
 				B84674692795BEB600498884 /* UIStackView+extension.swift in Sources */,
 				B8052C72279AF0AF00585130 /* AddPhotoView.swift in Sources */,
 				B84674672795B96400498884 /* ButtonFormView.swift in Sources */,
