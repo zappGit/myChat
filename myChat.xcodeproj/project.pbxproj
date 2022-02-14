@@ -28,6 +28,10 @@
 		B846746B2795C4FA00498884 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B846746A2795C4FA00498884 /* SignupViewController.swift */; };
 		B846746D2795C82000498884 /* TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = B846746C2795C81F00498884 /* TextField.swift */; };
 		B846746F279851AA00498884 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B846746E279851AA00498884 /* LoginViewController.swift */; };
+		B87D38F127BA3BF300755DCC /* Bundle+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87D38F027BA3BF300755DCC /* Bundle+extension.swift */; };
+		B87D38F427BA59E200755DCC /* ActiveChatCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87D38F327BA59E200755DCC /* ActiveChatCell.swift */; };
+		B8F2696C27BA3ABD002EB2CC /* waitingChats.json in Resources */ = {isa = PBXBuildFile; fileRef = B8F2696B27BA3ABD002EB2CC /* waitingChats.json */; };
+		B8F2696E27BA3AC9002EB2CC /* activeChats.json in Resources */ = {isa = PBXBuildFile; fileRef = B8F2696D27BA3AC9002EB2CC /* activeChats.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +58,10 @@
 		B846746A2795C4FA00498884 /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
 		B846746C2795C81F00498884 /* TextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextField.swift; sourceTree = "<group>"; };
 		B846746E279851AA00498884 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		B87D38F027BA3BF300755DCC /* Bundle+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+extension.swift"; sourceTree = "<group>"; };
+		B87D38F327BA59E200755DCC /* ActiveChatCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveChatCell.swift; sourceTree = "<group>"; };
+		B8F2696B27BA3ABD002EB2CC /* waitingChats.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = waitingChats.json; path = "../../../../../../Downloads/15. урок/IChat/Extensions/UIKIt/waitingChats.json"; sourceTree = "<group>"; };
+		B8F2696D27BA3AC9002EB2CC /* activeChats.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = activeChats.json; path = "../../../../../../Downloads/15. урок/IChat/Extensions/UIKIt/activeChats.json"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +118,7 @@
 				B8220C012791B04200E1E7EC /* AppDelegate.swift */,
 				B8220C032791B04200E1E7EC /* SceneDelegate.swift */,
 				B8052C77279DAB9C00585130 /* SignIn+Auth */,
+				B87D38F227BA59CE00755DCC /* Cell */,
 				B8052C78279DABB600585130 /* Controllers */,
 				B8220C202795B68000E1E7EC /* Extensions */,
 				B8220C0A2791B04400E1E7EC /* Assets.xcassets */,
@@ -129,6 +138,8 @@
 				B8220C1727944BDD00E1E7EC /* UIFont+extension.swift */,
 				B8220C152794486B00E1E7EC /* UIButton+Extension.swift */,
 				B8052C73279C334D00585130 /* UISegmentedControl+extension.swift */,
+				B8F2696D27BA3AC9002EB2CC /* activeChats.json */,
+				B8F2696B27BA3ABD002EB2CC /* waitingChats.json */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -139,9 +150,18 @@
 				B8052C71279AF0AF00585130 /* AddPhotoView.swift */,
 				B84674662795B96400498884 /* ButtonFormView.swift */,
 				B846746C2795C81F00498884 /* TextField.swift */,
+				B87D38F027BA3BF300755DCC /* Bundle+extension.swift */,
 				B8220C1F2795B67100E1E7EC /* UIKit */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		B87D38F227BA59CE00755DCC /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				B87D38F327BA59E200755DCC /* ActiveChatCell.swift */,
+			);
+			name = Cell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -202,8 +222,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B8F2696C27BA3ABD002EB2CC /* waitingChats.json in Resources */,
 				B8220C0E2791B04400E1E7EC /* LaunchScreen.storyboard in Resources */,
 				B8220C0B2791B04400E1E7EC /* Assets.xcassets in Resources */,
+				B8F2696E27BA3AC9002EB2CC /* activeChats.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -217,6 +239,8 @@
 				B8052C76279DA89500585130 /* ListViewController.swift in Sources */,
 				B8052C74279C334D00585130 /* UISegmentedControl+extension.swift in Sources */,
 				B8220C062791B04200E1E7EC /* AuthViewController.swift in Sources */,
+				B87D38F127BA3BF300755DCC /* Bundle+extension.swift in Sources */,
+				B87D38F427BA59E200755DCC /* ActiveChatCell.swift in Sources */,
 				B8220C1827944BDD00E1E7EC /* UIFont+extension.swift in Sources */,
 				B846746B2795C4FA00498884 /* SignupViewController.swift in Sources */,
 				B8052C7C279DACB400585130 /* PeopleViewController.swift in Sources */,
