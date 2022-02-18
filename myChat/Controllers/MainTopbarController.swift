@@ -11,7 +11,7 @@ import UIKit
 class MainTopBArController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
-        tabBar.tintColor = .purple
+       
         let boldConfiguration = UIImage.SymbolConfiguration(weight: .bold)
         let peopleImage = UIImage(systemName: "person.2", withConfiguration: boldConfiguration)
         let chatImage = UIImage(systemName: "bubble.left.and.bubble.right", withConfiguration: boldConfiguration)

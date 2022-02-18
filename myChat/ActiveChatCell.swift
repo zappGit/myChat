@@ -19,7 +19,7 @@ class ActiveChatCell: UICollectionViewCell, ConfiguringCell {
     let friendImageView = UIImageView()
     let friendLabel = UILabel(text: "User name", font: .laoSangamMN20())
     let lastMessage = UILabel(text: "LOL", font: .laoSangamMN18())
-    let gradientView = UIView()
+    let gradientView = GradientView(from: .topTrailing, to: .bottomLeading, startColor: #colorLiteral(red: 0.8309458494, green: 0.7057176232, blue: 0.9536159635, alpha: 1), endColor:  #colorLiteral(red: 0.4784313725, green: 0.6980392157, blue: 0.9215686275, alpha: 1))
     
     func configure(with value: MyChat) {
         friendImageView.image = UIImage(named: value.userImageString)
@@ -29,6 +29,7 @@ class ActiveChatCell: UICollectionViewCell, ConfiguringCell {
 
     override init(frame: CGRect) {
         super.init(frame: frame)
+        backgroundColor = .white
         setupConstraints()
         
         self.layer.cornerRadius = 4
@@ -45,7 +46,7 @@ class ActiveChatCell: UICollectionViewCell, ConfiguringCell {
         friendLabel.translatesAutoresizingMaskIntoConstraints = false
         lastMessage.translatesAutoresizingMaskIntoConstraints = false
         
-        gradientView.backgroundColor = .black
+//        gradientView.backgroundColor = .black
         
         
         addSubview(friendImageView)

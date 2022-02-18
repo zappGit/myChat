@@ -58,7 +58,6 @@ class AddPhotoView: UIView {
         self.trailingAnchor.constraint(equalTo: plusButton.trailingAnchor).isActive = true
     }
     //так как зависит от фрейма то используем тут
-    
     override func layoutSubviews() {
         super.layoutSubviews()
         circleImageView.layer.masksToBounds = true
