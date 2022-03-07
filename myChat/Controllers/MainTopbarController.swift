@@ -18,8 +18,9 @@ class MainTopBArController: UITabBarController {
         let listViewController = ListViewController()
         let peopleViewController = PeopleViewController()
         
-        viewControllers = [generateNavigatinController(rootViewController: listViewController, title: "Conversation", image: chatImage!),
-                           generateNavigatinController(rootViewController: peopleViewController, title: "People", image: peopleImage!)]
+        viewControllers = [generateNavigatinController(rootViewController: peopleViewController, title: "People", image: peopleImage!),
+                           generateNavigatinController(rootViewController: listViewController, title: "Conversation", image: chatImage!)
+                           ]
         
     }
     private func generateNavigatinController(rootViewController: UIViewController, title: String, image: UIImage) -> UINavigationController {

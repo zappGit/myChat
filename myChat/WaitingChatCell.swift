@@ -12,8 +12,9 @@ class WaitingChatCell: UICollectionViewCell, ConfiguringCell {
     static var reuseID: String = "WaitingChatCell"
     let friendImage = UIImageView()
     
-    func configure(with value: MyChat) {
-        friendImage.image = UIImage(named: value.userImageString)
+    func configure<U: Hashable>(with value: U) {
+        guard let chat: MyChat = value as? MyChat else { return }
+        friendImage.image = UIImage(named: chat.userImageString)
     }
     
     override init(frame: CGRect) {

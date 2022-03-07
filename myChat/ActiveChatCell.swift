@@ -10,22 +10,26 @@ import UIKit
 
 protocol ConfiguringCell {
     static var reuseID: String {get}
-    func configure(with value: MyChat)
+    func configure<U: Hashable>(with value: U)
 }
 
 class ActiveChatCell: UICollectionViewCell, ConfiguringCell {
+   
+    func configure<U: Hashable>(with value: U) {
+        guard let chat: MyChat = value as? MyChat else { return }
+        friendImageView.image = UIImage(named: chat.userImageString)
+        friendLabel.text = chat.username
+        lastMessage.text = chat.lastMessage
+    }
+    
+    
     static var reuseID: String = "activeChatCell"
     
     let friendImageView = UIImageView()
     let friendLabel = UILabel(text: "User name", font: .laoSangamMN20())
     let lastMessage = UILabel(text: "LOL", font: .laoSangamMN18())
     let gradientView = GradientView(from: .topTrailing, to: .bottomLeading, startColor: #colorLiteral(red: 0.8309458494, green: 0.7057176232, blue: 0.9536159635, alpha: 1), endColor:  #colorLiteral(red: 0.4784313725, green: 0.6980392157, blue: 0.9215686275, alpha: 1))
-    
-    func configure(with value: MyChat) {
-        friendImageView.image = UIImage(named: value.userImageString)
-        friendLabel.text = value.username
-        lastMessage.text = value.lastMessage
-    }
+
 
     override init(frame: CGRect) {
         super.init(frame: frame)

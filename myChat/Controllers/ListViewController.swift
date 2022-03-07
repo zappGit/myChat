@@ -8,19 +8,6 @@
 import Foundation
 import UIKit
 
-struct MyChat: Hashable, Codable {
-    var username: String
-    var userImageString: String
-    var lastMessage: String
-    var id: Int
-    
-    func hash(into hasher: inout Hasher) {
-        hasher.combine(id)
-    }
-    static func == (lhs: MyChat, rhs: MyChat) -> Bool {
-        return lhs.id == rhs.id
-    }
-}
 
 class ListViewController: UIViewController {
     var collectionView: UICollectionView!
@@ -69,7 +56,7 @@ class ListViewController: UIViewController {
         view.addSubview(collectionView)
         collectionView.register(ActiveChatCell.self, forCellWithReuseIdentifier: ActiveChatCell.reuseID)
         collectionView.register(WaitingChatCell.self, forCellWithReuseIdentifier: WaitingChatCell.reuseID)
-        //делаем хедер для коллекшн вье
+        //делаем хедер для коллекшн вью
         collectionView.register(SectionHeader.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: SectionHeader.reuseID)
     }
     
@@ -157,13 +144,7 @@ extension ListViewController {
 }
 //MARK: Datasourse
 extension ListViewController {
-    private func configure<T: ConfiguringCell>(cellType: T.Type, with value: MyChat, for indexPath: IndexPath) -> T {
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellType.reuseID, for: indexPath) as? T else {
-            fatalError("Can't create a cell")
-        }
-        cell.configure(with: value)
-        return cell
-    }
+    
     private func createDataSourse() {
         dataSourse = UICollectionViewDiffableDataSource<Section, MyChat>(collectionView: collectionView, cellProvider: { collectionView, indexPath, itemIdentifier in
             guard let section = Section(rawValue: indexPath.section) else {
@@ -171,9 +152,9 @@ extension ListViewController {
             }
             switch section {
             case .activeChats:
-                return self.configure(cellType: ActiveChatCell.self, with: itemIdentifier, for: indexPath)
+                return self.configure(collectionView: collectionView, cellType: ActiveChatCell.self, with: itemIdentifier, for: indexPath)
             case .waitingChats:
-                return self.configure(cellType: WaitingChatCell.self, with: itemIdentifier, for: indexPath)
+                return self.configure(collectionView: collectionView, cellType: WaitingChatCell.self, with: itemIdentifier, for: indexPath)
             }
         })
         //датасорс для хедеров
